@@ -1,11 +1,11 @@
 
 function fetchDetails(address){
-    fetch("http://localhost:3000/weather?address="+address).then((response)=>{
+    fetch("/weather?address="+address).then((response)=>{
 
         response.json().then((data)=>{
             console.log("here");
             console.log(data);
-            document.getElementById("results").textContent=data;
+            document.getElementById("results").textContent=data.result;
         });
 
 

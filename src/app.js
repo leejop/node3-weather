@@ -8,6 +8,7 @@ let geocode1=require("./utils/geocode.js");
 let publicDir=path.join(__dirname,"../public");
 
 
+const port = process.env.PORT || 3000;
 
 let app=express();
 app.set("view engine","hbs");
@@ -95,7 +96,7 @@ app.get("*",(req,res)=>{
 
 });//app.com/help
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("Listened");
 });
 
